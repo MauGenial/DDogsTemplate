@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DDogs</title>
+    <link rel="shortcut icon" href="emojione--dog-face.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="banner-superior">
+        <h1>DDogs</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">RandomDog</a></li>
+                <li><a href="choosedog.html">ChooseDog</a></li>
+                <li><a href="doglibrary.html">DogLibrary</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <div id="resultado"></div>
+        <button class="btn-random" onclick="fhttpRequest()">RandomDog</button>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 DDogs. All rights reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+
 </body>
 </html>

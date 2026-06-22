@@ -1,0 +1,460 @@
+
+/* --- ESTILOS GENERALES --- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+body {
+    background-image: url('maurosigma.png');
+    background-repeat: repeat; /* Repite la imagen para cubrir toda la pantalla */
+    background-color: #c4956a; /* Un gris muy claro y moderno que resalta el banner */
+    margin: 0; /* Quita los márgenes blancos por defecto del navegador */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Fredoka', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+main {
+    flex: 1;
+}
+
+/* --- ESTILOS DEL BANNER DE NAVEGACIÓN --- */
+.banner-superior {
+    background-color: #4d3400; /* Color de fondo oscuro para el banner */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Separa el título de los enlaces */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    top: 0;
+}
+
+.banner-superior h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 24px;
+}
+
+.banner-superior ul {
+    list-style: none; /* Quita los puntitos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hace que los elementos se pongan uno al lado del otro */
+    gap: 20px; /* Separación entre cada opción */
+}
+
+.banner-superior a {
+    color: #ffffff;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+    border-bottom-width: 10px;
+    border-bottom-color: #1b1300;
+}
+
+/* Efecto al pasar el mouse por encima de las opciones */
+.banner-superior a:hover {
+    color: #ffc107; /* Color amarillo/dorado al hacer hover */
+}
+
+/* --- ESTILOS DEL PIE DE PÁGINA (Opcional, para que combine con tu paleta) --- */
+.pie-pagina {
+    background-color: #4d3400; /* El mismo marrón de tu banner y botón */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Refuerzo para asegurar su posición abajo */
+}
+
+
+/* --------------------------------------------- ESTILOS DEL INDEX ---------------------------------------------------------- */
+        .contenido {
+            padding: 20px;
+            text-align: center; /* Centra el botón y la imagen */
+            flex: 1;
+        }
+
+        #resultado img {
+            height: 400px; /* 1. Fuerza a todas las imágenes a medir exactamente esto de alto */
+            width: 100%;   /* O puedes usar un ancho fijo también, por ejemplo: width: 500px; */
+            max-width: 500px; /* Evita que se estire demasiado a lo ancho en pantallas grandes */
+    
+            object-fit: cover; /* 2. Evita que la imagen se deforme (aplique 'recorte' inteligente) */
+            object-position: center; /* Centra el recorte para que no se corte la cara del perrito */
+
+            /* Tus estilos anteriores */
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 15px;
+        }
+
+        .btn-random {
+            background-color: #d3a135; /* Color de fondo (amarillo llamativo) */
+            color: #1a1a1a;            /* Color del texto (oscuro para que contraste) */
+            font-size: 16px;           /* Tamaño de la letra */
+            font-weight: bold;         /* Letra en negrita */
+            font-family: 'Fredoka', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 12px 24px;        /* Espacio interno (alto y ancho) para darle volumen */
+            border: none;              /* Quita el borde gris feo por defecto */
+            border-radius: 8px;        /* Bordes redondeados */
+            cursor: pointer;           /* Cambia el cursor a una manito al pasar por encima */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+            transition: all 0.3s ease; /* Hace que las animaciones al pasar el mouse sean suaves */
+            
+        }
+
+        /* EFECTO HOVER: Lo que pasa cuando pones el mouse encima del botón */
+        .btn-random:hover {
+            background-color: #e0a800; /* Se oscurece un poco el fondo */
+            transform: translateY(-2px); /* El botón "sube" 2 píxeles sutilmente */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* La sombra aumenta para dar efecto de flotado */
+        }
+
+        /* EFECTO ACTIVE: Lo que pasa justo en el milisegundo que haces clic */
+        .btn-random:active {
+            transform: translateY(0); /* Vuelve a su posición original */
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Disminuye la sombra */
+        }
+        .pie-pagina{
+        background-color: #4d3400; /* Color de fondo oscuro para el pie de página */
+        color: #ffffff;
+        text-align: center;
+        }
+
+/* ----------------------------------- ESTILOS DE DOGLIBRARY ------------------------ */
+        .titulo-seccion {
+            text-align: center;
+            margin-top: 30px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        /* --- ESTILOS DEL BUSCADOR --- */
+        .contenedor-buscador {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-buscador {
+            width: 80%;
+            max-width: 400px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #4d3400;
+            border-radius: 25px;
+            outline: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: border-color 0.3s;
+        }
+
+        .input-buscador:focus {
+            border-color: #ffc107; /* Cambia a amarillo cuando haces clic para escribir */
+        }
+
+        /* --- GRID Y TARJETAS (Arregla el estiramiento vertical) --- */
+        .biblioteca-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            align-items: start; /* Evita que las tarjetas se estiren hacia abajo */
+            flex: 1;           /* Empuja el footer al fondo si hay pocas tarjetas */
+        }
+
+        .tarjeta-perro {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+            height: fit-content; /* 👈 Hacemos que la tarjeta solo mida lo que mide su contenido */
+        }
+
+        .tarjeta-perro:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta-perro img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            background-color: #eee;
+        }
+
+        .tarjeta-perro p {
+            margin: 0;
+            padding: 15px 10px; /* Altura y Anchura */
+            font-weight: bold;
+            color: #333;
+            text-transform: capitalize;
+            font-size: 16px;
+        }
+
+        /* --- ESTILOS DEL MODAL --- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-contenido {
+            background-color: white;
+            width: 90%;
+            max-width: 650px;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            animation: aparecer 0.3s ease;
+        }
+
+        @keyframes aparecer {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-cerrar {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .modal-cerrar:hover {
+            color: #000;
+        }
+
+        .modal-cuerpo {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .modal-cuerpo img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 14px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .modal-info {
+            flex: 1;
+            min-width: 240px;
+            text-align: left;
+        }
+
+        .modal-info h2 {
+            margin-top: 0;
+            text-transform: capitalize;
+            color: #4d3400;
+            font-size: 26px;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 5px;
+        }
+
+        .modal-info p {
+            color: #444;
+            line-height: 1.5;
+            margin: 10px 0;
+            font-size: 15px;
+        }
+        /* --- ESTILOS DEL BOTÓN IR ARRIBA --- */
+        .btn-subir {
+            display: none; /* Oculto por defecto en la parte superior */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99; /* Por encima de las tarjetas, pero debajo del modal */
+            background-color: #4d3400; /* A juego con tu banner */
+            color: white;
+            border: none;
+            outline: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Lo hace un círculo perfecto */
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-size: 24px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-subir:hover {
+            background-color: #ffc107; /* Cambia a amarillo al pasar el mouse */
+            color: #4d3400;
+            transform: scale(1.1); /* Se agranda un poquito */
+        }
+        /* Contenedor de la imagen y las flechas */
+        .contenedor-foto-tarjeta {
+            position: relative;
+            width: 100%;
+            height: 200px;
+        }
+
+        /* Estilo general para las flechas izquierda y derecha */
+        .flecha-carrusel {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(77, 52, 0, 0.7); /* El color marrón de tu banner con transparencia */
+            color: white;
+            border: none;
+            outline: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s, transform 0.1s;
+            z-index: 10; /* Asegura que queden encima de la foto */
+            opacity: 0;  /* Ocultas por defecto */
+        }
+
+        /* Muestra las flechas solo cuando pasas el mouse por encima de la tarjeta */
+        .tarjeta-perro:hover .flecha-carrusel {
+            opacity: 1;
+        }
+
+        .flecha-carrusel:hover {
+            background-color: #ffc107; /* Color amarillo al pasar el mouse */
+            color: #4d3400;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .flecha-izq {
+            left: 8px;
+        }
+
+        .flecha-der {
+            right: 8px;
+        }        
+
+
+/* --------------------------------------------- ESTILOS DEL CHOOSEDOG -------------------------- */
+        .contenido-juego {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Contenedor que pone las dos opciones una al lado de la otra */
+        .juego-contenedor {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap; /* Para que en celulares se ponga uno abajo del otro */
+        }
+
+        /* Cada tarjeta de perro */
+        .opcion-perro {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #d3a135;
+            padding: 10px;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* Efecto al pasar el mouse sobre el perro que quieres elegir */
+        .opcion-perro:hover {
+            transform: scale(1.03); /* Se agranda un poquito */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .overlay.select {
+            background: rgba(0, 128, 0, 0.45);
+            z-index: 2; /* Asegura que el overlay de selección esté por encima*/
+        }
+
+        .overlay.reject {
+            background: rgba(255, 0, 0, 0.45);
+            z-index: 2; /* Asegura que el overlay de rechazo esté por encima*/
+        }
+
+        .overlay.show {
+            opacity: 1;
+            animation: overlay-fade-out 1.5s ease forwards;
+        }
+
+        .overlay {
+            color: #ffffff;
+            font-size: 5rem;
+            font-weight: 700;
+            text-shadow: 0 0 14px rgba(0, 0, 0, 0.35);
+        }
+
+        @keyframes overlay-fade-out {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        /* Aplicamos las reglas para las imágenes */
+        .opcion-perro img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            display: block; /* Quita espacios rebeldes abajo de la imagen */
+        }
+
+        /* Estilo para cuando una imagen está cargando */
+        .cargando {
+            opacity: 0.5;
+            pointer-events: none; /* Evita que hagan click mientras carga */
+        }
+
+        .breed-name {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background: #ffffff;
+            color: #000000;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            z-index: 1;
+        }
+     

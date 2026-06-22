@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogLibrary - DDogs</title>
+    <link rel="shortcut icon" href="emojione--dog-face.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="banner-superior">
+        <h1>DDogs</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">RandomDog</a></li>
+                <li><a href="choosedog.html">ChooseDog</a></li>
+                <li><a href="doglibrary.html">DogLibrary</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 class="titulo-seccion">Dog Library</h2>
+
+    <div class="contenedor-buscador">
+        <input type="text" id="buscador" class="input-buscador" placeholder="Search dog breed... 🔍">
+    </div>
+
+    <main class="biblioteca-grid" id="grid-razas"></main>
+    
+    <div id="mi-modal" class="modal-overlay" onclick="cerrarModalFondo(event)">
+        <div class="modal-contenido">
+            <span class="modal-cerrar" onclick="cerrarModal()">&times;</span>
+            <div class="modal-cuerpo">
+                <img id="modal-img" src="" alt="Cargando imagen...">
+                <div class="modal-info">
+                    <h2 id="modal-titulo">Nombre</h2>
+                    <div id="modal-texto"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="btnSubir" class="btn-subir" onclick="subirArriba()">▲</button>
+
+    <footer class="pie-pagina">
+    <p>&copy; 2026 DDogs. All rights reserved.</p>
+    </footer>
+    
+    <script src="doglibrary.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChooseDog - DDogs</title>
+    <link rel="shortcut icon" href="emojione--dog-face.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="banner-superior">
+        <h1>DDogs</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">RandomDog</a></li>
+                <li><a href="choosedog.html">ChooseDog</a></li>
+                <li><a href="doglibrary.html">DogLibrary</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido-juego">
+        <h2 style="color: #ffffff; text-shadow: 1px 3px 10px rgba(14, 14, 14, 0.55);">Choose Your Favourite Dog</h2>
+        
+        <div class="juego-contenedor">
+            <div class="opcion-perro" id="perro-izq" onclick="elegirPerro('izq')">
+                <div class="overlay" id="overlay-izq"></div>
+                <div class="breed-name" id="breed-izq">Loading...</div>
+                <img id="img-izq" src="" alt="Loading image...">
+            </div>
+
+            <div class="opcion-perro" id="perro-der" onclick="elegirPerro('der')">
+                <div class="overlay" id="overlay-der"></div>
+                <div class="breed-name" id="breed-der">Loading...</div>
+                <img id="img-der" src="" alt="Loading image...">
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+    <p>&copy; 2026 DDogs. All rights reserved.</p>
+    </footer>
+
+    <script src="choosedog.js"></script>
+</body>
+</html>
